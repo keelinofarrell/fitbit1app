@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+<html>
+<head>
+ 
+  <title>Fitbit1app</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  
+  
+
+ </head>
+
+<body>
+<div id="banner">
+	<%=image_tag("fitbits.jpg",:size => "100x50") %>
+	<%="FitBits" %>
+	<%= render '/fitbits/search' %>
+	
+<% flash.each do |key, value| %>
+	<div class="flash <%= key %>">
+		<%=value %>
+<% end %>
+	
+	
+</div>
+
+<div class="container">
+	<ul class="nav nav-tabs">
+	<% if !signed_in? %>
+			<li><%=link_to "Sign In", login_path %></li>
+		<%else%>
+			<li>Signed in as <%= @current_member.name%></li>
+			<li><%=link_to "Sign Out", logout_path %></li>
+		<%end%>
+		
+		<li><%= link_to "About", root_path%></li>
+		<li><%=link_to "Fitbits", fitbits_path%></li>
+		<li><%=link_to "Members", members_path%></li>
+		<li><%=link_to "Buy FitBits",'/shop/index' %></li>
+	</ul>
+	 
+
+
+
+		<%= yield %>
+	</div>
+ </div>
+	
+
+</body>
+</html>

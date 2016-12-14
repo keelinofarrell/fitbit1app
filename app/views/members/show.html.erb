@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @member.username %>
+</p>
+
+<p>
+  <strong>Password digest:</strong>
+  <%= @member.password_digest %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @member.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @member.age %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @member.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @member.address %>
+</p>
+
+<p>
+  <strong>Fitbit:</strong>
+  <%= @member.fitbit_id %>
+</p>
+
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>

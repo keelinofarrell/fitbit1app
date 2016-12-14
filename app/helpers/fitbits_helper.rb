@@ -1,0 +1,2 @@
+module FitbitsHelper
+end

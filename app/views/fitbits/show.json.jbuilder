@@ -1,0 +1,1 @@
+json.partial! "fitbits/fitbit", fitbit: @fitbit

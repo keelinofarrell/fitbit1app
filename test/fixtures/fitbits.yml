@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  picture: MyString
+  battery_life_in_hours: 1
+  colour: MyString
+  display: MyString
+
+two:
+  name: MyString
+  picture: MyString
+  battery_life_in_hours: 1
+  colour: MyString
+  display: MyString
